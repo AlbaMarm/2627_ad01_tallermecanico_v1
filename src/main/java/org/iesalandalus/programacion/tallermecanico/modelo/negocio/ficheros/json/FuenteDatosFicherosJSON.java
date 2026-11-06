@@ -14,7 +14,7 @@ public class FuenteDatosFicherosJSON implements IFuenteDatos {
 
     @Override
     public IVehiculos crearVehiculos() {
-        return null;
+        return Vehiculos.getInstancia();
     }
 
     @Override

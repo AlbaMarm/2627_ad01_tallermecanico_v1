@@ -12,7 +12,7 @@ public class Cliente {
 	private String dni;
 	private String telefono;
 
-	private Cliente(){}
+	public Cliente(){}
 
 	public Cliente(String nombre, String dni, String telefono) {
 		setNombre(nombre);
