@@ -62,7 +62,10 @@ public class Trabajos implements ITrabajos {
             if (fichero.getParentFile() != null) {
                 fichero.getParentFile().mkdirs();
             }
-            mapper.writerWithDefaultPrettyPrinter().writeValue(fichero, trabajos);
+            mapper.writerFor(new TypeReference<List<Trabajo>>() {})
+                    .withDefaultPrettyPrinter()
+                    // indicar que es una lista de trabajos para no perder el tipo
+                    .writeValue(fichero, trabajos);
         } catch (IOException e) {
             System.out.printf("Error al escribir el fichero %s: %s%n", FICHERO_TRABAJOS, e.getMessage());
         }
