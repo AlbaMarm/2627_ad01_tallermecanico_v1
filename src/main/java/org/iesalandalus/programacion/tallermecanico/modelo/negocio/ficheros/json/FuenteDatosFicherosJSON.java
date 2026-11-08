@@ -19,6 +19,6 @@ public class FuenteDatosFicherosJSON implements IFuenteDatos {
 
     @Override
     public ITrabajos crearTrabajos() {
-        return null;
+        return Trabajos.getInstancia();
     }
 }
